@@ -10,6 +10,7 @@ const server = Hapi.server({
  * @apiName GetDetails
  * @apiSuccess (Success_200) {Object} requestHeaders the request headers sent
  * @apiSuccess (Success_200) {String} data test text
+ * @apiSuccess (Session) {String} kbsampleprovidej-account-id testing the dependency headers
  */
 server.route({
   method: 'GET',
@@ -18,7 +19,7 @@ server.route({
     return h.response({
       data: 'test data',
       requestHeaders: request.headers
-    }).header('kbsampleprovide-account-id', 'freakinyes')
+    }).header('kbsampleprovidej-account-id', 'freakinyes')
   }
 })
 
