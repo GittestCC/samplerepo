@@ -10,8 +10,9 @@
     "debug": "nodemon --exec npm run dev:debug",
     "build:clean": "rm -rf dist && mkdir dist",
     "build:server": "babel -d ./dist ./app",
-    "build": "npm run build:clean && npm run build:server",
-    "prod": "PORT=80 node dist/index.js",
+    "prod:build": "npm run build:clean && npm run build:server",
+    "prod:server": "PORT=80 node dist/index.js",
+    "prod": "npm run prod:build && npm run prod:server",
     "apidoc": "apidoc -e /node_modules",
     "test": "jest"
   },
