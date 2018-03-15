@@ -2,7 +2,6 @@ import Hapi from 'hapi'
 
 // Create a server with a host and port
 const server = Hapi.server({
-  host: '127.0.0.1',
   port: process.env.PORT || '8000'
 })
 
